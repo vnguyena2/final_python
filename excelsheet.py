@@ -10,6 +10,10 @@ import xlwings as xw
 # from openpyxl.cell.cell import WriteOnlyCell
 # from openpyxl import load_workbook
 import os.path
+
+
+#print("hello=")
+print(""=:=)
 '''
 Look up ticker value from the list.
 Pause until a continue input is received.
