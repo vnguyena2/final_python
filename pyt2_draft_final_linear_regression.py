@@ -29,6 +29,7 @@ def prediction_score(x1, y1, power):
 #take in a set and return a set with the same x but new predicted y
 def regression_transform(set_prebulid, power):
     return set_rebulid
+    #note- imcomplte
 '''
 x = np.array([5, 15, 25, 35, 45, 55])
 y = np.array([5, 20, 14, 32, 22, 38])
