@@ -5,7 +5,9 @@ from sklearn.preprocessing import PolynomialFeatures
 
 #builds a fuction that returns a predicted y, x1 and y1 are arrays
 def predict_dependent(x , x1, y1, power):
+    #reformates one of the arrays so .fit() works
     x1 = x1.reshape((-1,1))
+    #determines witch type of fucntion is used
     if power == 1:
         model = LinearRegression().fit(x1,y1)
     elif power > 1 and power % 1 == 0:
@@ -14,7 +16,7 @@ def predict_dependent(x , x1, y1, power):
     prediction = model.predict(x)
     return prediction
 
-#scores how well the model fits that data with a R^2 score, with is from 0 to 1
+#scores how well the model fits that data with a R^2 score, witch is from 0 to 1
 def prediction_score(x1, y1, power):
     x1 = x1.reshape((-1,1))
     if power == 1:
