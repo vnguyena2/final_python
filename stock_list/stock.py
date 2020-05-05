@@ -22,12 +22,24 @@ def extract_ticker_symbols(u_file,tix_symbols):
 
 
 def main():
+	quit_key = "done"
 	extract_ticker_symbols(csv_file,ticker_list)
-	user_tix = input("Please enter a valid ticker from Nasdaq: ")
-	user_tix = '"' + user_tix + '"'
-	retrieve_tix(user_tix,ticker_list)
-
-
+	while True:
+		#Allowing the user to pass multiple stock letters
+		user_stocks = list()
+		stock_letters = input("Enter up to 4 letters to search for ticker stock " + \
+								"Enter 'done' to quit : ")
+		if stock_letters == quit_key:
+			quit()
+		try:
+			if stock_letters.isalpha():
+				print("is alpha")
+				stock_letters = stock_letters.upper()
+				stock_letters = '"' + stock_letters + '"'
+				print(stock_letters)
+				retrieve_tix(stock_letters,ticker_list)
+		except ValueError as error:
+			print('invalid input', error)
 
 if __name__ == '__main__':
 	main()
