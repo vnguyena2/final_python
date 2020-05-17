@@ -1,0 +1,7 @@
+
+*.py
+stock_list/Append_Tickets/AppendTickers.py
+stock_list/companylist.csv
+.idea/workspace.xml
+02_06_End-Copy1.ipynb
+stock_list/stock.py
